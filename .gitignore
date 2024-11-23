@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+.pytest_cache
+
+.DS_Store
+
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+python/python_list.output
+python/python_tuple.output
+python/python_string.output
+python/python_set.output
+python/python_dictionary.output
+python/algo/.pytest_cache
+
+
+interview/python/*/practice*

@@ -1,0 +1,58 @@
+To build and run camera docker daemon, simply execute following command:
+`docker run -d -it --rm --name camera1 -v "$PWD":/Users/bittu/Downloads/gito/verkada/camera -w /Users/bittu/Downloads/gito/verkada/camera python:3 python camera.py`
+
+Flags and explanations:
+1. /Users/bittu/Downloads/gito/verkada/simple_project/camera is directory where python script is saved
+2. Python3 image is selected
+3. -d tells docker to run the docker as detached version (running in the background)
+4. --name will define the name of the Image. In this example, my-running-script is the name of the docker container
+5. --rm flag is for automatic clean up. This flag automatically cleans up the container and removes the file system when the container exits
+6. --it is for interactive processes (like a shell), you must use -i -t together in order to allocate a tty for the container process. -i -t is often written -it
+7. -v is for volume mount
+
+
+Some helpful docker commands:
+- `docker version` to know the version info of the docker
+- `docker container ls -a` to see all the running docker container
+- `docker stop $container_name` to stop docker container
+- `docker ps` to see current docker container process
+
+
+Using just a docker:
+- To Build a Container
+`docker build -t testserver .`
+here, "testserver" would be the name of the docker container
+"." would be directory. "." means current directory
+Camera container can be built the same way
+- To run server container, with clean up flags
+"--rm": the container is removed when it exits
+`docker run --rm -it -d -p 5000:5000 testserver`
+- To run camera instance container with volume mount
+`docker run --network="host" --volume=/Users/bittu/Downloads/gito/verkada/camera/conf:/conf testcamera88`
+or
+`docker run --rm -it -d --network="host" --volume=/Users/bittu/Downloads/gito/verkada/camera/conf:/conf testcamera88`
+- To run camera instance
+`docker run --rm -it -d --network="host" testcamera1`
+- To stop all the docker containers (For mac)
+`docker stop $(docker ps -a -q)`
+- To remove all docker containers
+`docker rm $(docker ps -a -q)`
+- To remove all docker images
+`docker rmi $(docker images -q)`
+- To access the docker container's file system or CLI
+`docker run -t -i testcamera3 /bin/bash`
+
+
+
+Docker compose:
+- To build
+`docker-compose build`
+- To start all the docker services:
+`docker-compose up` or `docker-compose up -d`
+- To stop all the docker services:
+`docker-compose down`
+
+
+Example curl command to get the logs:
+`curl -i "http://localhost:5000/2/logs/all/"`
+`curl -i -H "Accept: application/json" "http://loca:5000/2/logs/all/"`

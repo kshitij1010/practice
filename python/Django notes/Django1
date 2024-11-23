@@ -1,0 +1,73 @@
+Django + virtualenv Basic commands:
+
+-->
+If you are using virtualenv then,
+-->
+__
+To make new virtual environment:
+1. to create in current directory
+`virtualenv .`
+
+or
+2. to create virtua env in separate directory
+virtaulenv /home/bittu/Desktop/trialProject
+
+3. to create virtual env with python 3
+virtaulenv /home/bittu/Desktop/trialProject -p python3
+__
+To activate virtual enve using terminal
+`source bin/activate`
+
+__
+To deactivate virtual enve using terminal
+`deactivate`
+
+-->
+Install/Create the dependencies
+-->
+__
+To create a requirement list
+`pip freeze > requirements.txt`
+
+__
+To install dependencies
+`pip install -r requirements.txt`
+
+
+-->
+Django
+-->
+__
+Start Django Project
+`django-admin startproject __$name_of_the_project__`
+
+__
+Create Database (or create migration for the database)
+`python manage.py makemigrations`
+
+__
+Migrate Database (to start database -- create database entries)
+`python manage.py migrate`
+
+__
+Create web app
+`python manage.py startapp __$name_of_the_app__"
+
+__
+Run Server
+`python manage.py runserver`
+
+__
+Create superuser(create admin user)
+`python manage.py createsuperuser`
+
+__
+Access python and django project from shell
+`python manage.py shell`
+Example. https://www.youtube.com/watch?v=ACdY7pId4DM&index=13&list=PLEsfXFp6DpzQSEMN5PXvEWuD2gEWVngCZ
+
+__
+after updating models.py
+always run,
+`python manage.py makemigrations`
+`python manage.py migrate`

@@ -1,0 +1,81 @@
+#########
+JSON-JavaScript Object Notation:
+in JSON, there are two basic this, list and object: where list is an array and onject is a dictoinary in comparision with python
+
+
+-->json represents data as nested "lists" and "dictionaries"
+
+
+'''text'''  : so text written in three ' is a considered as a string
+
+example:
+
+data = '''{
+	"name" : "bittu"
+	"number" : "1234567890"
+	"email" : {
+		hide : "yes"
+		}
+	}'''
+
+To use json in python:
+	import json
+
+--> in json, you need to deserialize the data
+
+Example code for json in python#########
+#####example_1___________JSON native python dictionary
+import json
+
+data = '''{
+	"name" : "bittu",
+	"phone" : {
+		"type" : "international",
+		"number" : "1234567890"
+		},
+	"email" : {
+		"hide" : "yes"
+		}
+	}'''
+
+info = json.loads(data)  ####this is the deserialize step
+print 'Name:', info["name"]
+print 'Hide:',info["email"]["hide"]
+
+#####example_2___________JSON native python dictionary
+import json
+
+input = '''[
+	{ "id" : "01",
+	  "x" : "2",
+	  "name" : "bittu"
+	}
+	{ "id" : "01",
+	  "x" : "2",
+	  "name" : "bittu"
+	}	
+	]'''
+
+info = json.loads(input)  ####this is the deserialize step
+print "user count:", len(info)
+for item in info:
+	print 'Name:', item["name"]
+	print 'Id:',item["id"]
+	print 'Attribute', itme["x"]
+
+_______________________________________
+
+API- Application Program Interface
+
+TWO web service Technologies:
+
+	SOAP:Simple Object Access Protocol (software based)
+	REST: Representation State Transfer (resource focused)
+
+
+
+
+
+
+
+

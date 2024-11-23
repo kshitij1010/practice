@@ -1,0 +1,207 @@
+[
+        {
+                "q_num": 1,
+                "type": "ds",
+                "sub_type": "ARRAY & STRING",
+                "description": "Is Unique: Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?",
+                "solution": "reference/ds/ex1.py"
+        },
+        {
+                "q_num": 2,
+                "type": "ds",
+                "sub_type": "ARRAY & STRING",
+                "description": "Check Permutation: Given two strings, write a method to decide if one is a permutation of the other Meaning two strings have same char in different orders",
+                "solution": "reference/ds/ex2.py"
+        },
+        {
+                "q_num": 3,
+                "type": "ds",
+                "sub_type": "ARRAY & STRING",
+                "description": "URLify: Write a method to replace all spaces in a string with '%20'. You may assume that the string has sufficient space at the end to hold the additional characters, and that you are given the 'true' length of the string.",
+                "example": "EXAMPLE\nInput: 'Mr John Smith ' J 13\nOutput: 'Mr%20John%20Smith%20'",
+                "solution": "reference/ds/ex3.py"
+        },
+        {
+                "q_num": 4,
+                "type": "ds",
+                "sub_type": "ARRAY & STRING",
+                "description": "Palindrome Permutation: Given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or phrase that is the same forwards and backwards. A permutation is a rearrangement of letters.The palindrome does not need to be limited to just dictionary words.",
+                "example": "EXAMPLE\nInput: Tact Coa\nOutput: True (permutations: 'taco cat'. 'atco cta', etc.)",
+                "solution": "reference/ds/ex4.py"
+        },
+        {
+                "q_num": 5,
+                "type": "ds",
+                "sub_type": "ARRAY & STRING",
+                "description": "One Away: There are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character.Given two strings, write a function to check if they are one edit (or zero edits) away.",
+                "example": "EXAMPLE\npale, ple -> true\npales, pale -> true\npale, bale -> true\npale, bake -> false\nprt, pbdls",
+                "solution": "reference/ds/ex5.py"
+        },
+        {
+                "q_num": 6,
+                "type": "ds",
+                "sub_type": "ARRAY & STRING",
+                "description": "String Compression: Implement a method to perform basic string compression using the counts of repeated characters.\nIf the 'compressed' string would not become smaller than the original string, your method should return the original string. You can assume the string has only uppercase and lowercase letters (a - z).",
+                "example": "EXAMPLE\nstring 'aabcccccaaa' would become 'a2b1c5a3'",
+                "solution": "reference/ds/ex6.py"
+        },
+        {
+                "q_num": 7,
+                "type": "ds",
+                "sub_type": "ARRAY & STRING",
+                "description": "Rotate Matrix: Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees.\nCan you do this in place?",
+                "solution": "reference/ds/ex7.py"
+        },
+        {
+                "q_num": 8,
+                "type": "ds",
+                "sub_type": "ARRAY & STRING",
+                "description": "Zero Matrix: Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to O.",
+                "solution": "reference/ds/ex8.py"
+        },
+        {
+                "q_num": 9,
+                "type": "ds",
+                "sub_type": "ARRAY & STRING",
+                "description": "String Rotation: Assume you have a method isSubstring which checks if one word is a substring of another.Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring",
+                "example": "EXAMPLE\n'waterbottle' is a rotation of 'erbottlewat''",
+                "solution": "reference/ds/ex9.py"
+        },
+        {
+                "q_num": 10,
+                "type": "ds",
+                "sub_type": "ARRAY & STRING",
+                "description": "Move all zeros to the left in the array",
+                "solution": "reference/ds/ex10.py"
+        },
+        {
+                "q_num": 101,
+                "type": "ds",
+                "sub_type": "LINKED LIST",
+                "description": "Program to create the linked list with creating node, deleting node, printing all node methods",
+                "solution": "reference/ds/ex101.py"
+        },
+        {
+                "q_num": 102,
+                "type": "ds",
+                "sub_type": "LINKED LIST",
+                "description": "Remove Dups: Write code to remove duplicates from an unsorted linked list.\nFOLLOW UP\nHow would you solve this problem if a temporary buffer is not allowed?",
+                "solution": "reference/ds/ex102.py"
+        },
+        {
+                "q_num": 103,
+                "type": "ds",
+                "sub_type": "LINKED LIST",
+                "description": "Return Kth to Last: Implement an algorithm to find the kth to last element of a singly linked list.",
+                "solution": "reference/ds/ex103.py"
+        },
+        {
+                "q_num": 104,
+                "type": "ds",
+                "sub_type": "LINKED LIST",
+                "description": "Delete Middle Node: Implement an algorithm to delete a node in the middle (i.e., any node but the first and last node, not necessarily the exact middle) of a singly linked list, given only access to that node.",
+                "example": "EXAMPLE\nInput:the node c from the linked list a->b->c->d->e->f\nResult: nothing is returned, but the new linked list looks like a->b->d->e->f",
+                "solution": "reference/ds/ex104.py"
+        },
+        {
+                "q_num": 105,
+                "type": "ds",
+                "sub_type": "LINKED LIST",
+                "description": "Partition: Write code to partition a linked list around a value x, such that all nodes less than x come before all nodes greater than or equal to x. If x is contained within the list, the values of x only need to be after the elements less than x (see below). The partition element x can appear anywhere in the 'right partition'; it does not need to appear between the left and right partitions.",
+                "example": "EXAMPLE\nInput:\n3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition= 5]\nOutput:\n3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8",
+                "solution": "reference/ds/ex105.py"
+        },
+        {
+                "q_num": 106,
+                "type": "ds",
+                "sub_type": "LINKED LIST",
+                "description": "Sum Lists: You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1 's digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list.",
+                "example": "EXAMPLE\nInput: (7-> 1 -> 6) + (5 -> 9 -> 2).That is,617 + 295.\nOutput: 2 -> 1 -> 9. That is, 912.\nFOLLOW UP\nSuppose the digits are stored in forward order. Repeat the above problem.\nInput:(6 -> 1 -> 7) + (2 -> 9 -> 5).That is,617 + 295.\nOutput: 9 -> 1 -> 2. That is, 912.",
+                "solution": "reference/ds/ex106.py"
+        },
+        {
+                "q_num": 107,
+                "type": "ds",
+                "sub_type": "LINKED LIST",
+                "description": "Palindrome: Implement a function to check if a linked list is a palindrome.",
+                "solution": "reference/ds/ex107.py"
+        },
+        {
+                "q_num": 108,
+                "type": "ds",
+                "sub_type": "LINKED LIST",
+                "description": "Intersection: Given two (singly) linked lists, determine if the two lists intersect. Return the intersecting node. Note that the intersection is defined based on reference, not value. That is, if the kth node of the first linked list is the exact same node (by reference) as the jth node of the second linked list, then they are intersecting.",
+                "solution": "reference/ds/ex108.py"
+        },
+        {
+                "q_num": 109,
+                "type": "ds",
+                "sub_type": "LINKED LIST",
+                "description": "Loop Detection: Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop.\nDEFINITION\nCircular linked list: A (corrupt) linked list in which a node's next pointer points to an earlier node, so as to make a loop in the linked list.",
+                "example": "EXAMPLE\nInput: A -> B -> C -> D -> E -> C [the same C as earlier]\nOutput: C",
+                "solution": "reference/ds/ex109.py"
+        },
+        {
+                "q_num": 110,
+                "type": "ds",
+                "sub_type": "LINKED LIST",
+                "description": "Reverse linked list",
+                "solution": "reference/ds/ex110.py"
+        },
+        {
+                "q_num": 201,
+                "type": "ds",
+                "sub_type": "STACK & QUEUES",
+                "description": "implement stack with List",
+                "solution": "reference/ds/ex201.py"
+        },
+        {
+                "q_num": 202,
+                "type": "ds",
+                "sub_type": "STACK & QUEUES",
+                "description": "Stack Min: How would you design a stack which, in addition to push and pop, has a function min which returns the minimum element? Push, pop and min should all operate in 0(1) time.",
+                "solution": "reference/ds/ex202.py"
+        },
+        {
+                "q_num": 301,
+                "type": "ds",
+                "sub_type": "TREE & GRAPHS",
+                "description": "Basic TREE questions:\n1. find the max height of the tree\n2. find the min height of the tree\n3. check if the given binary tree is binary search tree(BST)\n4. print leaf node\n5. print full node\n6. print Pre-order, In-order, Post-order\n7. print all the route from root node to leaf node\n8. print all the node of the route with the max height of the tree",
+                "solution": "reference/ds/ex301.py"
+        },
+        {
+                "q_num": 302,
+                "type": "ds",
+                "sub_type": "TREE & GRAPHS",
+                "description": "Route between Nodes: Given a directed graph, design an algorithm to find out whether there is a route between two node.",
+                "solution": "reference/ds/ex302.py"
+        },
+        {
+                "q_num": 303,
+                "type": "ds",
+                "sub_type": "TREE & GRAPHS",
+                "description": "Check Balanced: Implement a function to check if binary tree is balanced. A Balanced tree is defined to be a tree such that the height of the two subtrees of any node never differ by more than one.",
+                "solution": "reference/ds/ex303.py"
+        },
+        {
+                "q_num": 304,
+                "type": "ds",
+                "sub_type": "TREE & GRAPHS",
+                "description": "Validate BST: Implement a function to check if a binary tree is a binary search tree.",
+                "solution": "reference/ds/ex304.py"
+        },
+        {
+                "q_num": 305,
+                "type": "ds",
+                "sub_type": "TREE & GRAPHS",
+                "description": "Example of finding inorder successor",
+                "solution": "reference/ds/ex305.py"
+        },
+        {
+                "q_num": 306,
+                "type": "ds",
+                "sub_type": "TREE & GRAPHS",
+                "description": "Minimal Tree: Given a sorted (increasing order) array with unique interger elements, write an algorithm to create a binary search tree with minimal height",
+                "solution": "reference/ds/ex306.py"
+        }
+]

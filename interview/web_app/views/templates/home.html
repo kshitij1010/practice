@@ -1,0 +1,20 @@
+{% extends "base_frame.html" %} {% block content %}
+<div class="row h-75">
+    <div class="col-sm-12 nav-center-auto">
+        <div class="row text-center">
+            <div class="col-sm-2"></div>
+            <a href="{{url_for('solved_questions_list')}}" class="btn-normal button-txt" style="text-decoration: none;">
+                Solved Questions
+            </a>
+            <div class="col-sm-1"></div>
+            <a href="{{url_for('pick_a_question')}}" class="btn button-txt" style="text-decoration: none;">
+                Start Coding
+            </a>
+            <div class="col-sm-1"></div>
+            <a href="{{url_for('all_questions_list')}}" class="btn-normal button-txt" style="text-decoration: none;">
+                All Questions
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

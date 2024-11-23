@@ -1,0 +1,82 @@
+
+####python few tips##########
+
+-->>Exponential:
+abc=2**3   ###means 2^3 gives answer 8
+
+-->>To print random number character or element of string:
+fifth_letter = "pyhton"[5]
+print fifth_letter			##output::: n
+
+-->>to change upper and lower case:
+parrot = "Norwegian Blue".upper()
+print parrot
+parrot = "Norwegian Blue".lower()
+print parrot					##output::: NORWEGIAN BLUE	norwegin blue
+
+
+-->>assign the variable fifth_letter equal to the fifth letter of the string "nature".
+fifth_letter ="nature"[4]
+print fifth_letter
+
+-->>The str() method turns non-strings into strings
+pi=3.14
+print  str(pi)
+
+-->>String Concatenation(string merge)
+print "Spam "+"and "+"eggs"   ###o/p::Spam and eggs
+print "The value of pi is around " + str(3.14)  ###o/p::The value of pi is around 3.14
+
+-->>String Formatting with "%"
+string_1 = "Camelot"
+string_2 = "place"
+hey=10
+print "Let's not go to %s. 'Tis a silly %s. %d" % (string_1, string_2, hey)  ###o/p::Let's not go to Camelot. 'Tis a silly place. 10
+	-->String Formatting with % + take input from user
+		name = raw_input("What is your name?").lower()  ###with raw_input we can use ".lower() or like that others
+		quest = raw_input("What is your quest?")
+		color = raw_input("What is your favorite color?")
+		print "Ah, so your name is %s, your quest is %s, " \		#\ this sign is use to continue sentence in new line
+		"and your favorite color is %s." % (name, quest, color)
+
+	-->>sIMPLE WORK WITH STRING __basics__
+		my_string=raw_input("enter your name::")
+		print "hey hello %s" %(my_string)
+		print len(my_string)
+		print my_string.upper()
+
+___--->>>date and time
+	from datetime import datetime
+	
+	print datetime.now()		#print current time from your system's hardware clock
+		
+	a=datetime.now()
+	print a.year		#just print year from current time
+	print a.month		#month
+	print a.day		#day
+	print a.hour		#hour
+	print a.minute		#minute
+	print a.second		#second
+
+_____to get random number:::::::::::::::::::::::::::::::::::;
+	
+	import random
+	
+	r=random.randrange(starting_number, last_number)
+	example. r =random.radnrange (0,8) #this will create random number in between 0 and 8
+
+__________________------------------>>>>>>>>>>>>>>Trial code___ask user for selecting option and give according output
+
+def trial():
+    print "You've just entered maze"
+    print "Do you take the left or the right?"
+    answer = raw_input("Type left or right and hit 'Enter'.").lower()
+    if answer == "left" or answer == "l":
+        print "left!"
+    elif answer == "right" or answer == "r":
+        print "right!"
+    else:
+        print "You didn't pick left or right! Try again."
+        trial()
+
+trial()

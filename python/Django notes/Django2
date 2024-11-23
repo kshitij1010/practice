@@ -1,0 +1,31 @@
+Djanog "settings.py"
+
+__
+BASE_DIR
+This contains the main path of the web application. Main Path is where manage.py is located for the respected django project (base directory).
+
+
+__
+SECRET_KEY
+Keep this hidden and different in real production
+
+__
+DEBUG
+debug is the boolean for debugging while developing or testing the app
+it can be True or Flase.
+
+__
+ALLOWED_HOSTS
+
+
+__
+INSTALLED_APPS
+
+
+__
+
+__
+DATABASES
+This will have all the information of the database. 
+Path for the database, 
+which database to use

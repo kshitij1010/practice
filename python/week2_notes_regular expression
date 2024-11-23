@@ -1,0 +1,125 @@
+-->To use regualr expression in your program , mention below commnad
+	import re
+
+--> to open file:
+	open("file_name")
+	example. xyz=open("hello.txt")
+
+Example to find word in file
+(Normal way_____):
+Ex-1._________________________________
+xyz=open("file_name")
+for line in xyz:
+	line = line.rstrip() #remove last or trailing character
+	if line.find("From:") >= 0: 
+	#if string is not there, then it will return "-1" as a value. that is why this condition has been used
+		print line
+
+(using Regular expression_____):
+
+import re
+
+xyz=open("file_name")
+for line in xyz:
+	line=line.rstrip()	#remove last or trailing character
+	if re.search("From:", line):
+		print line
+________________________________________
+to find line starting with provided word
+Ex-2.
+xyz=open("file_name")
+for line in xyz:
+	line = line.rstrip() #remove last or trailing character
+	if line.startswith("From:") >= 0: 
+	#if string is not there, then it will return "-1" as a value. that is why this condition has been used
+		print line
+
+(using Regular expression_____):
+
+import re
+
+xyz=open("file_name")
+for line in xyz:
+	line=line.rstrip()	#remove last or trailing character
+	if re.search("^From:", line):############
+	# "^" sign implies that serach just for the starting word 'from'
+		print line
+______________________________________
+
+---->
+^   match the start of the line
+.   match any character
+*   any number of times (0 or more times)
++   any number of times (1 or more times)
+\S  match any non-whitespace character
+
+#########in the ex-2., if we write if re.search("^x.*:",line)
+Out put would be line starting with "x" and has or has not ":" in the text (space/no space in between "x" and ":")
+ex. "x-now its time for programming: python"
+    "x is the lead character:unsolved"
+    "xheyhello how are u?"
+    "xheyhello:how are u?"
+    "x-heyhello:howareu?"
+#########in the ex-2., if we write if re.search("^x\S+:",line)
+Out put would be line starting with "x" and has ":" atleast one time or more time in the text. no whitespace allowed as \S is mentioned (no space in between "x" and ":")
+ex.
+    "xheyhello:how are u?"
+    "x-heyhello:howareu?"
+
+---->re.search("word_to_serach")
+this command will return true or false, depends upon word is there in text or not
+	a="hey hello bittu how are you"
+	b=re.search("bittu",a)
+	if b>=0:
+		print "correct"
+	else:
+		print "not in text"
+	####output:: correct
+
+	c=re.search("askbdkas",a)
+	if c>=0:
+		print "correct"
+	else:
+		print "not in text"
+	####output:: not in text
+
+---->re.findall
+this command will look in text or string and find word happed to multiple time in string or text
+"findall" will provide python list as an output
+
+	a="my 2 favorite numbers are 72 and 100"
+	b=re.findall('[0-6]+',a)
+	c=re.findall('[0-9]+',a)
+	d=re.findall('2',a)
+	e=re.findall('[0-9]',a)
+	f=re.findall('my+',a)
+	print b,c,d,e
+	####ouput::['2', '2', '100'] ['2', '72', '100'] ['2', '2'] ['2', '7', '2', '1', '0', '0'] ['my', 'my']
+
+to find from the list of character
+	abc=re.findall('[ayx]',a)
+	print abc
+	####output::['a', 'a', 'a']
+	#there is no x and y so it is just showing found "a" in list format
+
+----> greedy match and non greedy match (check ppt of regular expression
+----> "?" add to the "+" or "*" to indicate that the match is to be done in a non-greedy manne
+
+----> To find "e-mail" from single line text
+x=From xyz.abc@hello.com sat June 5 09:12:16 2008
+y=re.findall("\S+@\S",x) #\non-wihite space character
+print y
+##### output:: ['xyz.abc@hello.com']
+
+Example of combination regular expression using parenthesis
+	y=re.findall("^From (\S+@\S)",x)
+	##this will return as above only, but only from line which is starting with "From".
+
+---->xyz=re.findall("@([^ ]*)",x)
+this regex means find "@" in text and after that match word until it finds blank space
+x=From xyz.abc@hello.com sat June 5 09:12:16 2008
+xyz=re.findall("@([^ ]*)",x)
+print xyz
+####output:: hello.com
+
+

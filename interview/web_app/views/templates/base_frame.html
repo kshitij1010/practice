@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>By Brindal</title>
+    </head>
+
+	<body>
+        <div class="nav-bar">
+        	<div class="row divider orange">
+        		<div class="col-md-12"></div>
+        	</div>
+        	<div class="row banner menu">
+                <div class="col-md-1"></div>
+        		<div class="col-md-11 col-md-offset-1 padding-none">
+        			<h1 class="logo">
+                        <b>
+            		  		<span class="word1">By</span>
+            		  		<span class="word2">Brindal</span>
+                        </b>
+                        <span style="font-size:20px; font-family: 'Montserrat', sans-serif; text-transform: none;">Coding Practice</span>
+						<div class="dropdown">
+							<div class="menu-btn btn-normal button-txt" style="font-size: 30px; color:282828;">
+								Menu
+							</div>
+						    <div class="dropdown-content text-center">
+								<div>
+									<a href="{{url_for('welcome_page')}}" style="text-decoration: none;">
+										<i class="fa fa-home" style="font-size: 40px; padding-top: 17px;"></i>
+									</a>
+								</div>
+								<hr>
+								<div>
+									<a href="{{url_for('pick_a_question')}}" style="text-decoration: none;">
+										<b>Pick One</b>
+									</a>
+								</div>
+								<hr>
+								<div>
+									<a href="{{url_for('solved_questions_list')}}" style="text-decoration: none;">
+										<b>Solved Questions</b>
+									</a>
+								</div>
+								<hr>
+								<div>
+									<a href="{{url_for('all_questions_list')}}" style="text-decoration: none;">
+										<b>All Questions</b>
+									</a>
+								</div>
+								<hr>
+								<div style="margin-top:17px;">
+									<a href="{{url_for('reset_status')}}" style="text-decoration: none;">
+										<b>Reset All</b>
+									</a>
+								</div>
+						    </div>
+						</div>
+        			</h1>
+        		</div>
+        	</div>
+        </div>
+        <br>
+		<br>
+		<br><br><br>
+		<div class="container">
+			{% block content %} {% endblock %}
+		</div>
+	</body>
+</html>

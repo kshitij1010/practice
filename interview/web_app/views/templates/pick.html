@@ -1,0 +1,31 @@
+{% extends "base_frame.html" %} {% block content %}
+
+<div class="row h-50">
+    <div class="col-md-2"></div>
+    <div class = "col-md-8">
+        {{ question.id }}. {{ question.name }}
+        <div class="row">
+            Last solved on: {{ question.last_solved }}
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class = "col-sm-10">
+                {{ question.descriptions }}
+            </div>
+        </div>
+        <div class="row"> {{ question.example }} </div>
+        <div class="row">
+            <a href="{{ question.reference }}" class="btn button-txt" style="text-decoration: none;">
+                Link to Question or solution
+            </a>
+        </div>
+        <div class="row">
+            <a href="{{url_for('change_status', question_id=question.id)}}" class="btn-normal button-txt" style="text-decoration: none;">
+                Mark Solved
+            </a>
+
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+{% endblock %}

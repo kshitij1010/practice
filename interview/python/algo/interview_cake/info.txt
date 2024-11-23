@@ -1,0 +1,11 @@
+What are some common ways to get O(n) runtime?
+
+One common way to get O(n) runtime is to use a greedy algorithm.
+Example, in case we're looking to just grab a specific value from our input set
+(e.g. the "largest" or the "greatest difference")
+
+Another common way to get O(n) runtime is to use counting.
+Example,
+We can build a list score_counts where the indices represent scores
+and the values represent how many times the score appears.
+Once we have that, can we generate a sorted list of scores?

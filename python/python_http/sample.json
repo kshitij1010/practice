@@ -1,0 +1,29 @@
+[{
+    "id": 1,
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john√ç@test.com",
+    "city": "Los Angeles",
+    "flag": true
+    }, {
+    "id": 2,
+    "first_name": "John2",
+    "last_name": "Doe",
+    "email": "john2ƒ∆@test.com",
+    "city": "London",
+    "flag": false
+    }, {
+    "id": 3,
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "email": "jane√ç@test.com",
+    "city": "Toronto",
+    "flag": null
+    }, {
+    "id": 4,
+    "first_name": "Jane2",
+    "last_name": "Doe",
+    "email": "jane2ƒ∆@test.com",
+    "city": ["vancouver", "tokyo"],
+    "flag": null
+}]

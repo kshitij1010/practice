@@ -1,0 +1,42 @@
+_________________________________SOCKET PROGRAMMING in PYTHON___________
+---->to use socket or to do socket programming
+	import socket
+
+---->to create socket
+	socket_name = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	example.
+	mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+----> to connect to the server or proper address
+#establish connection between me and host name
+	mysock.connect( ("host_name", port_name))
+	example.
+	mysock.connect( ("www.google.com", 80))
+
+----> to establish connection between our python and foriegn(foriegn as in APPLICATION running on web server)-mention this code in starting in python___this is basic transport layer (TCP) in network stack connection__
+
+	import socket,
+	my_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	my_sock.connect (("www.google.com", 80))
+
+
+_______________________Information_________________
+---->URL-uniform resource locator
+Ex-1.
+http://www.dr-chuck.com/page1.htm
+##here
+	http:// is protocol
+	www.dr-chuck.com is host
+	page1.html is document
+Ex-2. http://www.youtube.com/watch?v=x2GyILq59rl
+##here
+	http:// is protocol
+	www.youtube.com is host
+	watch?v=x2GyILq59rl is document
+	
+______________________________
+
+
+
+
+

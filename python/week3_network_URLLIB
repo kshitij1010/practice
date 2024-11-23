@@ -1,0 +1,21 @@
+----> To import application layer URL
+		import urllib
+Example.
+#same code as done in socket programming using urllib, you will not get header using this method; you only get data or text
+		import urllib
+		fhand = urllib.urlopen('http://www.py4inf.com/code/romeo.txt')
+
+		for line in fhand:
+				print line.strip()
+_________________________
+Example.
+##to check how many time single word is coming in full body of given host name
+	import urllib
+	fhand = urllib.urlopen('http://www.py4inf.com/code/romeo.txt')
+
+	counts  = dict()
+	for line in fhand:
+		words=line.split()
+		for word in words:
+			counts[word] = counts.get(word, 0) +1
+print counts

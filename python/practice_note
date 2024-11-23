@@ -1,0 +1,34 @@
+--->>>>>>find how many time word or words are there in txt files(multiple lines file)
+
+file = open(filename)
+#or###file = open(sys.argv[1]) ##argv[x] here, x is number of position of argument to enter in terminal(like mnemonics in C)
+search_word = rax_input("enter word to search:")
+x=0
+linecount = 0
+for line in file:
+	print linecount
+	if search_word in line:
+		x+=
+		print line
+		print linecount
+	linecount+=1
+print x
+
+
+---->>>>> Count how many time single character is coming in string::
+string =  raw_input("enter any thing::")
+#set(string) = a,b,k,s,j
+for i in set(string):
+	if string.count(i)==1:
+		print i
+
+----->>>>>>Count how many time words are coming in list
+string =  raw_input("enter any thing::")
+#set(string) = a,b,k,s,j
+s = "123123 123 345 67 45 857 3756 29835"
+##a=s.split()
+
+for i in set(string.split(" ")):
+
+	if string.count(i)==1:
+		print i
